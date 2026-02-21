@@ -3,7 +3,13 @@ name: Release to NuGet
 on:
   push:
     tags:
-      - 'v*.*.*' # Trigger on v1.0.0, etc.
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g. 0.1.0)'
+        required: true
+        default: '0.1.0'
 
 jobs:
   publish:
@@ -21,7 +27,14 @@ jobs:
 
     - name: Extract Version
       id: get_version
-      run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+      run: |
+        if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+          echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+        else
+          # refs/tags/v0.1.0 -> 0.1.0
+          VERSION=${GITHUB_REF#refs/tags/v}
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+        fi
 
     - name: Restore dependencies
       run: dotnet restore
