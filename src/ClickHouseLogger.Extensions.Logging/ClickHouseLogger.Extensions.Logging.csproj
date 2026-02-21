@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>ClickHouseLogger.Extensions.Logging</PackageId>
+    <Description>Microsoft.Extensions.Logging provider for IronLogger — AddClickHouse() integration</Description>
+    <RootNamespace>ClickHouseLogger.Extensions.Logging</RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Version>1.0.0</Version>
+    <Authors>Sarp</Authors>
+    <Description>Extremely fast, low-allocation Microsoft.Extensions.Logging provider for ClickHouse. Implements buffered NDJSON batch pushing with extensive static scope and correlation trace enrichment capabilities.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/IronLogger</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/IronLogger/IronLogger.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>ClickHouse;Logging;MEL;Serilog;Observability;Telemetry</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClickHouseLogger.Core\ClickHouseLogger.Core.csproj" />
+    <ProjectReference Include="..\ClickHouseLogger.Sinks.ClickHouse\ClickHouseLogger.Sinks.ClickHouse.csproj" />
+  </ItemGroup>
+
+</Project>

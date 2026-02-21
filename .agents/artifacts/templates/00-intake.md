@@ -1,0 +1,13 @@
+# Intake
+
+## Request summary
+- ...
+
+## Constraints (from PROJECT_PROFILE.md)
+- ...
+
+## Unknowns
+- ...
+
+## Proposed next step
+- ...

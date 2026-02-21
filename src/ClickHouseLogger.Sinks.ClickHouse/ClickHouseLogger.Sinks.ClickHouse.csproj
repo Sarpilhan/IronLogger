@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>ClickHouseLogger.Sinks.ClickHouse</PackageId>
+    <Description>ClickHouse HTTP sink (JSONEachRow + gzip + retry) for IronLogger</Description>
+    <RootNamespace>ClickHouseLogger.Sinks.ClickHouse</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClickHouseLogger.Core\ClickHouseLogger.Core.csproj" />
+  </ItemGroup>
+
+</Project>

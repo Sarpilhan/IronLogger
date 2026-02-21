@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/ClickHouseLogger.Sample.AspNetCore/ClickHouseLogger.Sample.AspNetCore.csproj" />
+    <Project Path="samples/ClickHouseLogger.Sample.Worker/ClickHouseLogger.Sample.Worker.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/ClickHouseLogger.Abstractions/ClickHouseLogger.Abstractions.csproj" />
+    <Project Path="src/ClickHouseLogger.AspNetCore/ClickHouseLogger.AspNetCore.csproj" />
+    <Project Path="src/ClickHouseLogger.Core/ClickHouseLogger.Core.csproj" />
+    <Project Path="src/ClickHouseLogger.Extensions.Logging/ClickHouseLogger.Extensions.Logging.csproj" />
+    <Project Path="src/ClickHouseLogger.Integrations.AspNetCore/ClickHouseLogger.Integrations.AspNetCore.csproj" />
+    <Project Path="src/ClickHouseLogger.Sinks.ClickHouse/ClickHouseLogger.Sinks.ClickHouse.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ClickHouseLogger.AspNetCore.Tests/ClickHouseLogger.AspNetCore.Tests.csproj" />
+    <Project Path="tests/ClickHouseLogger.LoadGen/ClickHouseLogger.LoadGen.csproj" />
+    <Project Path="tests/ClickHouseLogger.Tests.Unit/ClickHouseLogger.Tests.Unit.csproj" />
+  </Folder>
+</Solution>

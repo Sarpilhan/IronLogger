@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: ironlogger-clickhouse
+    ports:
+      - "8123:8123"   # HTTP interface
+      - "9000:9000"   # Native TCP (not used in MVP, but useful for debugging)
+    volumes:
+      - clickhouse-data:/var/lib/clickhouse
+      - ./docs:/docker-entrypoint-initdb.d:ro
+    environment:
+      CLICKHOUSE_DB: observability
+      CLICKHOUSE_USER: logger
+      CLICKHOUSE_PASSWORD: logger_dev_pass
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: 1
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    healthcheck:
+      test: ["CMD", "clickhouse-client", "--query", "SELECT 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  clickhouse-data:

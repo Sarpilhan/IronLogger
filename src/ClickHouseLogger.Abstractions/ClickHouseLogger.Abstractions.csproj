@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>ClickHouseLogger.Abstractions</PackageId>
+    <Description>Core models, interfaces, and configuration for IronLogger — ClickHouse structured logging for .NET</Description>
+    <RootNamespace>ClickHouseLogger.Abstractions</RootNamespace>
+  </PropertyGroup>
+
+</Project>

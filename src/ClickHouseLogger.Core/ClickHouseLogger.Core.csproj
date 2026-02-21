@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>ClickHouseLogger.Core</PackageId>
+    <Description>Core pipeline components (queue, batcher, redactor, serializer, enricher) for IronLogger</Description>
+    <RootNamespace>ClickHouseLogger.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClickHouseLogger.Abstractions\ClickHouseLogger.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

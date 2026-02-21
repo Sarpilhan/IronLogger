@@ -1,0 +1,41 @@
+## .NET
+bin/
+obj/
+artifacts/build/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+## NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+## IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+## OS
+Thumbs.db
+.DS_Store
+
+## Coverage
+coverage/
+TestResults/
+*.trx
+*.coveragexml
+
+## Docker
+docker-compose.override.yml
